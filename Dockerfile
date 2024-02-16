@@ -1,4 +1,4 @@
-FROM docker:dind
+FROM docker:24.0.9-dind
 
 ARG MAVEN_APK_VERSION
 ARG JDK_APK_PACKAGE
