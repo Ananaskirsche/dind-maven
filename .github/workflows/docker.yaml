@@ -31,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: intension/docker-dind-maven:${{ env.maven_apk_version }}-${{ env.jdk_apk_package }}
+          tags: ananaskirsche/dind-maven:${{ env.maven_apk_version }}-${{ env.jdk_apk_package }}
           build-args: |
             MAVEN_APK_VERSION=${{ env.maven_apk_version }}
             JDK_APK_PACKAGE=${{ env.jdk_apk_package }}
