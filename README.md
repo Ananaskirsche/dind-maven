@@ -1,6 +1,7 @@
 # docker-dind-maven
 
 Originally created by ingokuba at [https://github.com/intensiongmbh/docker-dind-maven](https://github.com/intensiongmbh/docker-dind-maven).
+
 For running maven builds that need a docker daemon without sharing the host daemon.
 
 ## Building a new image
