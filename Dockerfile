@@ -1,9 +1,9 @@
-FROM docker:27-dind
+FROM docker:25-dind
 
 ARG MAVEN_APK_VERSION
 ARG JDK_APK_PACKAGE
 
-RUN apk add --no-cache bash "openjdk21=$JDK_APK_PACKAGE" "maven=$MAVEN_APK_VERSION"
+RUN apk add --no-cache bash "openjdk=$JDK_APK_PACKAGE" "maven=$MAVEN_APK_VERSION"
 
 RUN runtimeLine=$(mvn --version | grep runtime) && jvmPath=${runtimeLine#*runtime: } && echo "export JAVA_HOME=$jvmPath" >> ~/.bashrc
 ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk
